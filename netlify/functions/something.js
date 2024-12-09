@@ -1,6 +1,6 @@
 export default async (req, context) => {
     console.log(`####`, {
-        host: req.header['host']
+        host: req.headers.get('host')
     });
     return new Response('Hello, world!');
 };
