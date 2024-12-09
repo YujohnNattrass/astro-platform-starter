@@ -1,7 +1,10 @@
 export default async (req, context) => {
-    console.log(`####`, {
-        host: req.headers.get('host')
-    });
+    for (const [key, value] of req.headers) {
+        console.log(`####`, {
+            key,
+            value
+        });
+    }
     return new Response('Hello, world!');
 };
 
